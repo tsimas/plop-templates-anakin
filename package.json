@@ -1,0 +1,21 @@
+{
+  "name": "plop-generator-anakin",
+  "version": "1.0.0",
+  "description": "Templates for module fot Anakin for the Angular 1.5 + TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: There are no tests\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tsimas/plop-templates-anakin.git"
+  },
+  "author": "tsimas",
+  "license": "MIT",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "dependencies": {
+    "fs-extra": "^0.30.0"
+  }
+}
