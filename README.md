@@ -53,15 +53,45 @@ Generates: `html`, `scss`, `component typescript` and wiring to the existing app
 ### How to use
 
 ```bash
+npm i --save-dev plop@1.9.1
 npm i --save-dev plop-generator-anakin
 touch plopfile.js
 ```
 
-and paste (and adjust) following code:
+paste (and adjust) following code in plopFile.js:
 
 ```JS
-module.exports = require('plop-templates-bc', {
+module.exports = require('plop-generator-anakin', {
   modulesDir: 'modules',
   modulesDef: 'modules.ts',
 });
 ```
+
+add to package.json
+```JS
+  "scripts": {
+    "plop": "plop"
+  },
+```
+
+add to modules.ts file (or modulesDef config parameter defined file):
+   - after next line of last import
+   ```JS
+     // @plop-import
+   ```
+  - after next line of angular module import
+   ```JS
+     // @plop-module
+   ```
+  - sample
+  ```JS
+    import * as angular from 'angular';
+    // @plop-import
+    
+    const AppModules = angular
+      .module('app.modules', [
+        penzugyiModuleState,
+        // @plop-module
+      ])
+  ```
+   

@@ -1,3 +1,6 @@
+# Ignore Web Storm #
+.idea
+
 # Logs
 logs
 *.log
